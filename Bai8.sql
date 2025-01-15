@@ -19,7 +19,7 @@ NgaySinh date
 );
 create table Diem(
 MaD int  primary key,
-Diem int not null,
+Diem int check (0<Diem<10) not null,
 MaSV varchar(20),
 foreign key (MaSV) references SinhVien(MaSV)  
 );
